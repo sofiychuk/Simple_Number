@@ -14,12 +14,12 @@ function genereteSimpleNumber(number) {
         for (var j = 2; j < i; j++) {
             if (i % j == 0) continue nextPrime;
         }
-        allSimple += i + '; ';
+        allSimple.push(i);
         
     }
-   // allSimple[allSimple.length - 1] += '.'; Не працює?
+    allSimple[allSimple.length - 1] += '.';
     
-    return alert(allSimple); 
+    return allSimple.join(", "); 
 }
 
-genereteSimpleNumber(number);
+console.log(genereteSimpleNumber(number));
